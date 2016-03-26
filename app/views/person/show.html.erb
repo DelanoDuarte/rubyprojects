@@ -1,0 +1,12 @@
+<h1> <%= @person.name %> </h1>
+
+<p>
+<strong>Name: </strong><%= @person.name %><br/>
+<strong>Surname: </strong><%= @person.surname %><br/>
+ <strong>Data de Criação:</strong><%= @person.created_at %><br />
+</p>
+
+
+<hr/>
+
+<%= link_to 'Back', {:action => 'list'} %>

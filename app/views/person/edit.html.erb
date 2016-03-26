@@ -1,0 +1,13 @@
+<h1>Editando uma Pessoa </h1>
+
+<%= form_for @person, :url =>{:action => "update", :id => @person} do |f| %>
+
+<p>Name:<%=f.text_field 'name' %></p>
+<p>Surname:<%=f.text_field 'surname' %></p>
+
+
+<%= f.submit "Salvar Alterações"%>
+
+<% end %>
+
+<%= link_to 'Back', {:action => 'list' } %>

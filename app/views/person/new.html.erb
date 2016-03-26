@@ -1,0 +1,17 @@
+<h1> Adicionando Nova Pessoa </h1>
+
+<%= form_tag :action => 'create' do%>
+
+<p><label for="person_name">Name</label></p>
+<%= text_field 'person','name'%>
+
+
+
+<p><label for="person_surname">Surname</label></p>
+<%= text_field 'person','surname'%>
+
+<br/>
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'list'} %>

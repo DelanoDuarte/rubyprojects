@@ -1,0 +1,21 @@
+<%if @person.blank? %>
+<p>Não há registros </p>
+<%else %>
+<p>Pessoas Cadastradas</p>
+
+<ul id="persons">
+  <% @person.each do |p| %>
+  <li>
+  <%= link_to p.name, {:action => 'show',:id => p.id} -%>
+  <b> <%= link_to 'Edit', {:action => 'edit', :id => p.id} %></b>
+  <b> <%= link_to "Delete", {:action => 'delete', :id => p.id},
+      :confirm => "Are you sure you want to delete this item?" %></b>
+
+  </li>
+  <% end %>
+</ul>
+
+
+<% end %>
+
+<p><%= link_to "Nova Pessoa", {:action => 'new'}-%></p>
