@@ -5,13 +5,22 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
+    adapter: postgresql
+    encoding: unicode
+    database: d8tr1ds0b89toa # name your development app something
+    host: ec2-54-221-201-165.compute-1.amazonaws.com
+    pool: 5
+    username: mzvjmfmhvcwmkb
+    password: tw4lmsB0djSIq7wHQmHtPxj5_c # or leave blank if you didn't set a password
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: d8tr1ds0b89toa # name your development app something
+  host: ec2-54-221-201-165.compute-1.amazonaws.com
+  pool: 5
+  username: mzvjmfmhvcwmkb
+  password: tw4lmsB0djSIq7wHQmHtPxj5_c # or leave blank if you didn't set a password
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
